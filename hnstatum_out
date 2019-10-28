@@ -1,0 +1,10 @@
+import requests
+illudhn = "https://hacker-news.firebaseio.com/v0/user/{}.json"
+nuntius = "{} pro nuntio"
+def nobis_statum ( nomine ) :
+    oratio = illudhn.format ( nomine )
+    contentus = requests.get ( oratio )
+    notitia = contentus.json ( )
+    return notitia
+notitia = nobis_statum ( "Aperocky" )
+print ( nuntius.format ( len ( notitia["submitted"] ) ) )
